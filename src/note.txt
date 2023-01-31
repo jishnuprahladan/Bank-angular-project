@@ -1,0 +1,39 @@
+
+Lyfe-cycle of angular component
+_____________________________________
+
+
+constructor   ----->  ngOnInit -------------> other methods
+
+
+
+Data Binding technique ina angular (data sharing in component)
+____________________________________________________________
+
+
+html - view
+ts   - component
+
+
+
+
+1 . on way Binding
+_____________________________________
+
+
+    -1.1  component to view data sharing
+    --------------------------------------
+
+        1.1.1  string interpollation       {{}}                 //direct view on html
+
+        1.1.2 property Binding             [property]=""         //placceholder like property binding
+
+    
+    -1.2 view to component data sharing
+    --------------------------------------
+
+        1.2.1  event Binding                                              (event)="method()"                 // button click / onclick
+        
+        1.2.2  event Binding using $ event                                (event)=method($event)             // get values from inputs
+
+        1.2.3  event Binding with template rendering variables            #variables                         // get values from inputs
