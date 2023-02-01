@@ -3,10 +3,13 @@
 <div class="container  bg-dark w-50 mt-5 text-center bg-opacity-50 rounded-4 p-5">
     <h1 class="text-center text-light">Login form</h1>
     <hr class="text-light">
-    <input type="text" #accno  id="l1" name="u1" class="form-control"
+
+    <input type="text" [(ngModel)]="acno"  id="l1" name="u1" class="form-control"
         [placeholder]="inputplaceholder">
-    <input type="password" #psw  placeholder="password" id="l2" name="u2"
+
+    <input type="password" [(ngModel)]="pass"  placeholder="password" id="l2" name="u2"
         class="form-control mt-4">
-    <button class="btn btn-success  mb-3 mt-4" type="button" (click)="login(accno,psw)">Login</button><br>
-    <p class="text-light">new user <a href="./register.html">register here</a></p>
+
+    <button class="btn btn-success  mb-3 mt-4" type="button" (click)="login()">Login</button><br>
+    <p class="text-light">new user <a routerLink="register">register here</a></p>
 </div>
