@@ -1,0 +1,15 @@
+<p>transacton works!</p>
+<div>
+    <table class="container text-center text-light ">
+        <thead class="bg-dark">
+            <th>Type</th>
+            <th>Amount</th>
+        </thead>
+        <tbody *ngFor="let i of transactionData">
+            <tr>
+                <td>{{i.TYPE}}</td>
+                <td>{{i.Amount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

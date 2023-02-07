@@ -24,32 +24,18 @@ export class LoginComponent {
 
     var acnum = this.acno
     var pasw = this.pass
-    var userDetails1 = this.ds.userDetails                                                       //event Binding
+    
+   const result=this.ds.Login(acnum,pasw)
 
-    if (acnum in userDetails1) {
-      if (pasw == userDetails1[acnum]["password"]) {
+   if(result){
+    alert("login successfully")
 
-        alert("login successfully")
-
-        this.router.navigateByUrl("dashboard")                                          // ---> redierecting
-      } else {
-        alert("incorect password")
-      }
-
-    } else {
-      alert("incorect username or not registered")
-    }
-  }
-  acnoChange(event: any) {
-    this.acno = event.target.value
-    // console.log(this.acno);
+    this.router.navigateByUrl("dashboard")
+   }
+   else{
+    alert("incorect ac NO pr password")
+   }
 
   }
-  passChange(event: any) {
-    this.pass = event.target.value
-    // console.log(this.pass);
-
-  }
-
-
+ 
 }

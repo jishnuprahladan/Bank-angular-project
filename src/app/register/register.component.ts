@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,18 +9,33 @@ import { DataService } from '../services/data.service';
 })
 export class RegisterComponent {
 
-  constructor(private ds:DataService){
+  constructor(private ds:DataService,private router:Router){
 
   }
   
+  uname=""
+  accNo=""
+  psw=""
 
-  register(){
+  register(){ 
  
-    alert("register clicked")
-   
-   var data= this.ds.userDetails
 
-   console.log(data);
+    var uname=this.uname
+    var accNO=this.accNo
+    var psw=this.psw
+ 
+   const result=this.ds.register(uname,accNO,psw)
+
+   if(result){
+    alert("register successfuly")
+
+    this.router.navigateByUrl("")
+   }
+   else
+   {
+    alert("user already present")
+   }
+
    
   }
 

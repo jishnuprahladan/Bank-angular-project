@@ -99,3 +99,13 @@ _______________________
 
         ng g s Service_name
         
+
+
+
+
+Angular Directives  -  to manipulate DOM
+____________________________________________________________
+
+
+    1.Component Directives
+    2.Structural Directives     *ngFor
